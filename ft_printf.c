@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/05 11:18:08 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/05/05 12:46:01 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/05/05 16:49:52 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int ft_printf(const char *, ...)
 {
-	
+
 	return (0);
 }
 

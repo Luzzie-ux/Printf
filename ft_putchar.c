@@ -6,13 +6,13 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/05 13:00:24 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/05/05 13:00:42 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/05/05 16:48:03 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void    ft_putchar(char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
