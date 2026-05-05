@@ -6,14 +6,15 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/05 11:18:08 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/05/05 12:05:19 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/05/05 12:46:01 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_printf(const char *format, ...)
+int ft_printf(const char *, ...)
 {
-	return	0;
+	
+	return (0);
 }
 

@@ -1,26 +1,12 @@
 *This project has been created as part of the 42 curriculum by rodrpere*
 
+# Introduction
 
+# Description
 
+# Usage
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Function implemented
 >Conversions to be done:
 > * [] %c Prints a single character.    
 > * [] %s Prints a string (as defined by the common C convention).  

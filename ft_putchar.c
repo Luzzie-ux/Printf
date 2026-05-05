@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/05 11:22:04 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/05/05 12:47:18 by rodrpere         ###   ########.fr       */
+/*   Created: 2026/05/05 13:00:24 by rodrpere          #+#    #+#             */
+/*   Updated: 2026/05/05 13:00:42 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdarg.h>
-
-//prototipos
-int ft_printf(const char *, ...);
-
-#endif
+void    ft_putchar(char c)
+{
+	write(1, &c, 1);
+}

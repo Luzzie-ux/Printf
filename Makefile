@@ -6,14 +6,14 @@
 #    By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/05 10:57:37 by rodrpere          #+#    #+#              #
-#    Updated: 2026/05/05 11:37:12 by rodrpere         ###   ########.fr        #
+#    Updated: 2026/05/05 12:49:43 by rodrpere         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 CC = cc 
 CFLAGS = -Wall -Wextra -Werror
-SRCS = $(wildcard *.c)
+SRCS = ft_printf.c\
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
