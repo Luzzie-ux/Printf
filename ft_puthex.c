@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_puthex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/05 11:22:04 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/05/06 19:04:29 by rodrpere         ###   ########.fr       */
+/*   Created: 2026/05/06 17:05:04 by rodrpere          #+#    #+#             */
+/*   Updated: 2026/05/06 19:06:39 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
+	
+void	ft_puthex(unsigned long n, char format)
+{
+	int		mod;
+	int		quo;
+	char	*hex;
 
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdarg.h>
-
-//prototipos
-int		ft_printf(const char *format, ...);
-
-void	ft_putnbr(int n);
-void	ft_putchar(char c);
-void	ft_putstr(char *s);
-void	ft_puthex(unsigned long n, char format);
-
-#endif
+	if (format == 'x')
+		hex = "0123456789abcdef";
+	else
+		hex = "0123456789ABCDEF";
+	if (n > 16)
+	{
+		quo = n / 16;
+		ft_puthex(quo, format);
+	}
+	mod = n % 16;
+	ft_putchar(hex[mod]);
+}

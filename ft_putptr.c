@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/05 11:22:04 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/05/06 19:04:29 by rodrpere         ###   ########.fr       */
+/*   Created: 2026/05/06 17:06:06 by rodrpere          #+#    #+#             */
+/*   Updated: 2026/05/06 17:06:24 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdarg.h>
-
-//prototipos
-int		ft_printf(const char *format, ...);
-
-void	ft_putnbr(int n);
-void	ft_putchar(char c);
-void	ft_putstr(char *s);
-void	ft_puthex(unsigned long n, char format);
-
-#endif
+void	ft_putptr(void *)
+{
+	
+}
