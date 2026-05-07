@@ -3,7 +3,7 @@
 # Introduction
 
 # Description
-
+In this project we will be creating our custom printf function to use in later projects on 42.
 # Usage
 
 # Function implemented
