@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/06 17:05:04 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/05/07 12:15:56 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/05/07 15:12:05 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void	ft_puthex(unsigned long n, char format)
 {
 	int		mod;
-	int		quo;
 	char	*hex;
 
 	if (format == 'x')
@@ -23,10 +22,7 @@ void	ft_puthex(unsigned long n, char format)
 	else
 		hex = "0123456789ABCDEF";
 	if (n > 16)
-	{
-		quo = n / 16;
-		ft_puthex(quo, format);
-	}
+		ft_puthex(n / 16, format);
 	mod = n % 16;
 	ft_putchar(hex[mod]);
 }
