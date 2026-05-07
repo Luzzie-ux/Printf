@@ -6,13 +6,15 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/06 17:06:06 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/05/06 17:06:24 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/05/07 12:20:02 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putptr(void *)
+void	ft_putptr(void *ptr, char format)
 {
-	
+	int	i;
+
+	i = 0;
 }

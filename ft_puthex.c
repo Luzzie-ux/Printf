@@ -6,12 +6,12 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/06 17:05:04 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/05/06 19:06:39 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/05/07 12:15:56 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-	
+
 void	ft_puthex(unsigned long n, char format)
 {
 	int		mod;

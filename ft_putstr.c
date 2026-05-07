@@ -6,18 +6,18 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/05 12:53:03 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/05/05 15:18:22 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/05/07 12:17:40 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "ft_printf.h"
+#include "ft_printf.h"
 
 void	ft_putstr(char *s)
 {
 	int	i;
 
 	i = 0;
-	while(s[i])
+	while (s[i])
 		i++;
 	write(1, s, i);
 }
