@@ -6,7 +6,7 @@
 #    By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/05 10:57:37 by rodrpere          #+#    #+#              #
-#    Updated: 2026/05/07 17:06:28 by rodrpere         ###   ########.fr        #
+#    Updated: 2026/05/08 16:30:43 by rodrpere         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,6 @@ OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
-bonus: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
@@ -38,4 +37,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re

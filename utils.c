@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 17:04:29 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/05/08 16:28:58 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/05/08 17:01:10 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ int	ft_putnbr(long nbr)
 	result = 0;
 	if (nbr < 0)
 	{
-		ft_putchar('-');
-		nbr = -nbr;
+		result += ft_putchar('-');
+		nbr = nbr * -1;
 	}
 	if (nbr >= 10)
 	{
@@ -33,7 +33,7 @@ int	ft_putnbr(long nbr)
 		result += ft_putchar((nbr % 10) + '0');
 	}
 	else
-		result += ft_putchar(nbr + '0');
+		result += ft_putchar((nbr % 10) + '0');
 	return (result);
 }
 
