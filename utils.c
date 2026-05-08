@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 17:04:29 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/05/07 17:36:59 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/05/08 15:35:53 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@ int	ft_putchar(char c)
 }
 int	ft_putnbr(long nbr)
 {
+	int	result;
+
+	result = 0;
 	if (nbr < 0)
 	{
 		ft_putchar('-');
@@ -25,12 +28,12 @@ int	ft_putnbr(long nbr)
 	}
 	if (nbr >= 10)
 	{
-		ft_putnbr(nbr / 10);
-		ft_putchar((nbr % 10) + '0');
+		result += ft_putnbr(nbr / 10);
+		result += ft_putchar((nbr % 10) + '0');
 	}
 	else
-		ft_putchar(nbr + '0');
-	return (0);
+		result += ft_putchar(nbr + '0');
+	return (result);
 }
 int	ft_putstr(char *s)
 {
@@ -46,28 +49,30 @@ int	ft_putstr(char *s)
 
 int	ft_puthex(unsigned long n, char format)
 {
-	int		mod;
+	int		result;
 	char	*hex;
 
+	result = 0;
 	if (format == 'x')
 		hex = "0123456789abcdef";
 	else
 		hex = "0123456789ABCDEF";
 	if (n > 15)
-		ft_puthex(n / 16, format);
-	mod = n % 16;
-	ft_putchar(hex[mod]);
-	return (0);
+		result += ft_puthex(n / 16, format);
+	result += ft_putchar(hex[n % 16]);
+	return (result);
 }
 
 int	ft_putptr(void *ptr)
 {
-	unsigned long n;
+	unsigned long 	n;
+	int				result;
 
+	result = 0;
 	if (!ptr)
 		return (ft_putstr("nil"));
 	n = (unsigned long)ptr;
-	ft_putstr("0x");
-	ft_puthex(n, 'x');
-	return (0);
+	result += ft_putstr("0x");
+	result += ft_puthex(n, 'x');
+	return (result);
 }
