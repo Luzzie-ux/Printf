@@ -6,7 +6,7 @@
 #    By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/05 10:57:37 by rodrpere          #+#    #+#              #
-#    Updated: 2026/05/08 16:30:43 by rodrpere         ###   ########.fr        #
+#    Updated: 2026/05/08 18:38:02 by rodrpere         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRCS = ft_printf.c utils.c \
+SRCS = ft_printf.c utils.c ptr.c\
 
 OBJS = $(SRCS:.c=.o)
 

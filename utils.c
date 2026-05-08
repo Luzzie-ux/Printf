@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 17:04:29 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/05/08 17:01:10 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/05/08 18:39:09 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,21 @@ int	ft_putnbr(long nbr)
 	return (result);
 }
 
+int	ft_putnbr_un(unsigned int nbr)
+{
+	int	result;
+
+	result = 0;
+	if (nbr >= 10)
+	{
+		result += ft_putnbr_un(nbr / 10);
+		result += ft_putchar((nbr % 10) + '0');
+	}
+	else
+		result += ft_putchar((nbr % 10) + '0');
+	return (result);
+}
+
 int	ft_putstr(char *s)
 {
 	int	i;
@@ -49,12 +64,14 @@ int	ft_putstr(char *s)
 	return (write(1, s, i));
 }
 
-int	ft_puthex(unsigned long n, char format)
+int	ft_puthex(unsigned int nbr, char format)
 {
 	int		result;
+	long	n;
 	char	*hex;
 
 	result = 0;
+	n = nbr;
 	if (format == 'x')
 		hex = "0123456789abcdef";
 	else
@@ -62,19 +79,5 @@ int	ft_puthex(unsigned long n, char format)
 	if (n > 15)
 		result += ft_puthex(n / 16, format);
 	result += ft_putchar(hex[n % 16]);
-	return (result);
-}
-
-int	ft_putptr(void *ptr)
-{
-	unsigned long		n;
-	int					result;
-
-	result = 0;
-	if (!ptr)
-		return (ft_putstr("nil"));
-	n = (unsigned long)ptr;
-	result += ft_putstr("0x");
-	result += ft_puthex(n, 'x');
 	return (result);
 }
