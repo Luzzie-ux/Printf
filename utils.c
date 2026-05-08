@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 17:04:29 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/05/08 15:35:53 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/05/08 16:28:58 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int	ft_putchar(char c)
 {
 	return (write(1, &c, 1));
 }
+
 int	ft_putnbr(long nbr)
 {
 	int	result;
@@ -35,6 +36,7 @@ int	ft_putnbr(long nbr)
 		result += ft_putchar(nbr + '0');
 	return (result);
 }
+
 int	ft_putstr(char *s)
 {
 	int	i;
@@ -65,8 +67,8 @@ int	ft_puthex(unsigned long n, char format)
 
 int	ft_putptr(void *ptr)
 {
-	unsigned long 	n;
-	int				result;
+	unsigned long		n;
+	int					result;
 
 	result = 0;
 	if (!ptr)

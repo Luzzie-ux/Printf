@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/05 11:18:08 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/05/08 16:24:24 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/05/08 16:28:14 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,15 @@ static int	phandler(const char *str, va_list args)
 			return (ft_putnbr(va_arg(args, int)));
 		else if (str[i] == 'u')
 			return (ft_putnbr(va_arg(args, unsigned long)));
-		else if(str[i] == 'x' || str[i] == 'X')
+		else if (str[i] == 'x' || str[i] == 'X')
 			return (ft_puthex(va_arg(args, unsigned long), str[i]));
-		else if(str[i] == '%')
+		else if (str[i] == '%')
 			return (ft_putchar('%'));
 		i++;
 	}
 	return (0);
 }
+
 int	ft_printf(const char *format, ...)
 {
 	va_list	args;
