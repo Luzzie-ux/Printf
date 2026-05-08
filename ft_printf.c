@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/05 11:18:08 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/05/08 16:18:02 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/05/08 16:24:24 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	ft_printf(const char *format, ...)
 		if (*format == '%')
 			result += (phandler(format, args));
 		else
-			result += (ft_putcahr(*format));
+			result += (ft_putchar(*format));
 		format++;
 	}
 	va_end(args);
