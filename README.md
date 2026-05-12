@@ -2,7 +2,7 @@
 
 # Introduction
 
-In this project I have coded a custom printf function to use in my later projects on the 42 school. In order to better understand what I have done, head over to the [Description](#description) or if you want to see what exactly was implemented go to [What was implemented](#what-was-implemented).
+In this project I have coded a custom printf function to use in my later projects on the 42 school. In order to better understand what I have done, head over to the [Description](#description) or if you want to see what exactly was implemented go to [Instructions](#instructions).
 
 I made use of three .c files:
 
@@ -28,7 +28,7 @@ Variadic functions are a type of functions that when included can receive an und
 
 In order to make this project possible I requeried the use of the following: [W3Schools](https://www.w3schools.com/), [StackOverflow](https://www.stackoverflow.com/), [GeeksforGeeks](https://www.geeksforgeeks.org/), [PortfolioCourses](https://www.youtube.com/@PortfolioCourses) and the help of my peers to better understand how to start, debug and learn how the original C Library Printf function works.
 
-# How to compile it
+# Instructions
 
 ```bash
 # 1. First git clone this repository by using:
